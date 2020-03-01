@@ -1,0 +1,26 @@
+@mixin bg-positioning($width, $top, $right, $bottom, $left) {
+  width: rem($width);
+  top: rem($top);
+  right: rem($right);
+  bottom: rem($bottom);
+  left: rem($left);
+}
+
+@mixin icon_images($iconUrl: style1, $type: png) {
+  background: {
+    image: url(../img/games/#{$iconUrl}.#{$type});
+  }
+}
+
+@mixin img_positioning($width, $height, $top, $right, $bottom, $left, $iconUrl: style1, $type: png) {
+  width: rem($width);
+  height: rem($height);
+  top: rem($top);
+  right: rem($right);
+  bottom: rem($bottom);
+  left: rem($left);
+
+  background: {
+    image: url(../img/games/#{$iconUrl}.#{$type});
+  }
+}

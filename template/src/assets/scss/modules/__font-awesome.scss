@@ -1,0 +1,17 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+@mixin fa($char) {
+    &:before {
+        content: $char;
+        @include fa-style;
+    }
+}
+
+@mixin fa-style() {
+    display: inline-block;
+    font-family: FontAwesome;
+    vertical-align: middle;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

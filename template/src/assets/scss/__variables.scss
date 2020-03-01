@@ -1,0 +1,128 @@
+//
+// Color
+//
+
+//
+// basic
+// $color-primary: hsl(215, 68%, 33%); // #1b4c8f
+// $color-secondary: hsl(149, 49%, 49%); //#40ba7a
+// $color-third: hsl(205, 52%, 49%); //#3c89c0
+
+// gray
+// $gray-darker: hsl(0, 0%, 11%); // #1c1c1c
+// $gray-dark: hsl(0, 0%, 20%); // #333333
+$gray-base: hsl(0, 0%, 46.67%); // #777777
+// $gray-light: hsl(0, 0%, 89%); // #e2e2e2
+// $gray-lighter: hsl(0, 0%, 92.94%); // #ededed
+
+//
+// Usage
+//
+$tablet-breakpoint-width: 576px;
+$desktop-narrow-breakpoint-width: 992px;
+$desktop-wide-breakpoint-width: 1200px;
+
+$desktop-wide-container-width: 1140px;
+$desktop-narrow-container-width: 960px;
+$custom-gutter-width: 20px; // 將欄距改成 20px
+
+%container-style {
+  width: 100%;
+  margin: auto;
+  padding: 0 12px;
+
+  @media screen and (min-width: $tablet-breakpoint-width) {
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: $desktop-narrow-breakpoint-width) {
+    padding: 0;
+    width: $desktop-narrow-container-width;
+  }
+
+  @media screen and (min-width: $desktop-wide-breakpoint-width) {
+    padding: 0;
+    width: $desktop-wide-container-width;
+  }
+}
+// content
+
+// pattern
+// $color-border-dark: $gray-base;
+// $color-border-light: $gray-light;
+
+// shadow
+$shadow-box: 1px 1px 1px rgba($gray-base, 0.5);
+$shadow-text: 1px 1px 1px rgba($gray-base, 0.5);
+
+// transition
+
+//
+// Font
+//
+
+$font-size-basic: 16px;
+// $font-size-larger: em($font-size-basic * 1.5); //24px
+// $font-size-large: em($font-size-basic * 1.125); //18px
+// $font-size-base: em($font-size-basic * 1);
+// $font-size-small: em($font-size-basic * 0.875); //14px
+// $font-size-smaller: em($font-size-basic * 0.75); //12px
+
+// $font-weight-bold: 700;
+// $font-weight-base: 500;
+// $font-weight-thin: 300;
+
+//
+// Line height
+//
+// $line-height-large: 3.4375; //55px
+// $line-height-taller: 2.25;
+// $line-height-tall: 1.875;
+// $line-height-base: 1.5;
+// $line-height-short: 1.25;
+// $line-height-shorter: 1;
+
+//
+// Document
+//
+
+// body
+$body-font-size: $font-size-base;
+// $body-letter-spacing: 0.3px;
+
+//
+// Component
+//
+
+// form
+$form-check-size: 1rem;
+
+// $z-index: ("header");
+
+body {
+  font-size: 1em;
+}
+
+@mixin above-tablet-width() {
+  @media screen and (min-width: $tablet-breakpoint-width) {
+    @content;
+  }
+}
+
+@mixin above-desktop-width() {
+  @media screen and (min-width: $desktop-narrow-breakpoint-width) {
+    @content;
+  }
+}
+
+@mixin above-wide-desktop-width() {
+  @media screen and (min-width: $desktop-wide-breakpoint-width) {
+    @content;
+  }
+}
+
+@mixin tablet-width() {
+  @media screen and (min-width: $tablet-breakpoint-width) and (max-width: $desktop-narrow-breakpoint-width) {
+    @content;
+  }
+}

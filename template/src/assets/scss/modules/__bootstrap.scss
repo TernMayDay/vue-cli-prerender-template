@@ -1,0 +1,25 @@
+// Bootstrap v4.0.0
+
+// Required
+@import "node_modules/bootstrap/scss/functions";
+
+// Grid containers
+// 或許搭配＿layout.scss 的 自定義custom-gutters--full-xs 與custom-gutters
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 960px,
+  xl: 1140px
+);
+$grid-gutter-width: 20px;
+
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/print";

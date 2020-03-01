@@ -1,0 +1,28 @@
+body {
+  margin-top: rem(54px);
+  overflow-x: hidden;
+  font-family: "微軟正黑體";
+
+  @include above-desktop-width {
+    margin-top: rem(92px);
+  }
+
+  &.font-size-big {
+    @include above-desktop-width {
+      margin-top: rem(99px);
+    }
+  }
+
+  &.font-size-small {
+    @include above-desktop-width {
+      margin-top: rem(90px);
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop,
+  #Main {
+    font-family: "微軟正黑體" !important;
+  } /* IE11 */
+}

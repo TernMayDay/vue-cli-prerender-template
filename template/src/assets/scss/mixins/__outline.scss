@@ -1,0 +1,14 @@
+@mixin outline() {
+  &:focus {
+    outline: 2px dotted #4280EC;
+  }
+}
+
+@mixin title-border($border-color) {
+  content: " ";
+  width: 3rem;
+  height: 0.875rem;
+  display: block;
+  border-bottom: $border-color 4px solid;
+  margin: 0 auto;
+}
